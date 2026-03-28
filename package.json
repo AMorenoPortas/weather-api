@@ -1,0 +1,29 @@
+{
+  "name": "weather-api",
+  "version": "1.0.0",
+  "description": "REST API for weather forecast using Node.js and OpenWeatherMap",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AMorenoPortas/weather-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AMorenoPortas/weather-api/issues"
+  },
+  "homepage": "https://github.com/AMorenoPortas/weather-api#readme",
+  "dependencies": {
+    "axios": "^1.14.0",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "jest": "^30.3.0",
+    "supertest": "^7.2.2"
+  }
+}
