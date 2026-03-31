@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router(); //solo maneja las rutas de este archivo
+
 const { getLocation } = require('../controllers/locationController');
 
 router.get('/location', getLocation); //define la ruta
