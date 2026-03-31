@@ -1,3 +1,5 @@
+//todo lo que tiene que ver con el servicio externo OpenWeatherMap
+
 const axios = require('axios'); //esto es un import, le digo a node q me traiga axios para usarla cdo necesite
 const { getLocationByIp } = require('./locationService');
 
@@ -16,4 +18,16 @@ const getCurrentWeather = async (city) => {
     return response.data; //response tiene toda la resp de axios y el .data es lo que nos importa porque son los datos reakes del clima en json
 };
 
-module.exports = { getCurrentWeather }; // exporto la funcion para que otros archivos la puedan usar
+const getForecast = async (city) => {
+    
+    if (!city) {
+        const location = await getLocationByIp();
+        city = location.city 
+    }
+
+    const url = `${BASE_URL}/forecast?q=${city}&appid=${API_KEY}&units=metric&lang=es`;
+    const response = await axios.get(url);
+    return response.data; 
+};
+
+module.exports = { getCurrentWeather, getForecast }; // exporto la funcion para que otros archivos la puedan usar

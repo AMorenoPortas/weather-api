@@ -1,3 +1,5 @@
+//todo lo que tenga que ver con ip-api
+
 const axios = require('axios'); //importo axios para llamar las apis externas
 
 const getLocationByIp = async () => {
